@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">XEBIA Apps</string>
+
+    <string name="book_price">Price : %s€</string>
+    <string name="book_description">Description : %s</string>
+
+    <string name="price_before_reduction">Prix avant réduction = %.2f€</string>
+    <string name="offer_porcentage">Le meilleur offre est une réduction s’appliquant sur le prix de l’ensemble des
+        livres. Le montant de la réduction est equals à %d€
+    </string>
+    <string name="offer_minus">Le meilleur offre est une déduction directement applicable en caisse d’un montant equals
+        à %d€
+    </string>
+    <string name="offer_slice">Le meilleur offre est un remboursement par tranche d’achat. On rembourse %1$d€ par
+        tranche de %2$d€ d’achat.
+    </string>
+    <string name="price_after_reduction">Prix après réduction = %.2f€</string>
+
+
+    <integer name="slide_animation_duration">300</integer>
+</resources>
