@@ -22,6 +22,7 @@ class BooksActivity : AppCompatActivity(), BooksContract {
 
     private var TAG = "BooksActivity"
 
+
     private lateinit var textCartItemCount: TextView
     private var mCartItemCount: Int = 0
     private var mBookBasket = ArrayList<ItemBooks>()
