@@ -21,6 +21,6 @@ interface InterfaceAPI {
     fun getAllBooks(): Call<ArrayList<ItemBooks>>
 
     @GET("books/{listBooks}/commercialOffers")
-    fun getOffresCommercialesBooks(@Path("listBooks") listBooks: String): Call<OfferResponse>
+    fun getOffresCommercialesBooks(@Path("listBooks") listBooks: String?): Call<OfferResponse>
 
 }

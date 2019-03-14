@@ -29,12 +29,12 @@ class BooksBasketActivity : AppCompatActivity(), OffersBooksContract {
     override fun onResponse(offerBooks: OfferResponse) {
 
         Log.d(TAG, "onResponse")
-        Log.d(TAG, "onResponse : price = " + price)
+        Log.d(TAG, "onResponse : price = $price")
 
         val offers = offerBooks.offers
-        var priceOffer1: Double = price
-        var priceOffer2: Double = price
-        var priceOffer3: Double = price
+        var priceOffer1 = this.price
+        var priceOffer2 = this.price
+        var priceOffer3 = this.price
 
         var value1: Int? = null
         var value2: Int? = null
@@ -49,13 +49,13 @@ class BooksBasketActivity : AppCompatActivity(), OffersBooksContract {
                 PERCENTAGE -> {
                     value1 = offer.value
                     priceOffer1 = price - ((price / 100) * offer.value)
-                    Log.d(TAG, "onResponse : PERCENTAGE = " + priceOffer1)
+                    Log.d(TAG, "onResponse : PERCENTAGE = $priceOffer1")
                 }
 
                 MINUS -> {
                     value2 = offer.value
                     priceOffer2 = price - offer.value
-                    Log.d(TAG, "onResponse : MINUS = " + priceOffer2)
+                    Log.d(TAG, "onResponse : MINUS = $priceOffer2")
                 }
 
                 SLICE -> {
@@ -63,7 +63,7 @@ class BooksBasketActivity : AppCompatActivity(), OffersBooksContract {
                     sliceValue3 = offer.sliceValue
                     val nbr = (price / offer.sliceValue).toInt()
                     priceOffer3 = price - (offer.value * nbr)
-                    Log.d(TAG, "onResponse : SLICE = " + priceOffer3)
+                    Log.d(TAG, "onResponse : SLICE = $priceOffer3")
                 }
             }
         }
@@ -114,7 +114,7 @@ class BooksBasketActivity : AppCompatActivity(), OffersBooksContract {
 
         Log.d(TAG, "listIdBooks = " + listIdBooks)
         val offersBooksPresenter = OffersBooksPresenter(this@BooksBasketActivity)
-        offersBooksPresenter.getOffersBooks(listIdBooks!!)
+        offersBooksPresenter.getOffersBooks(listIdBooks)
     }
 
 

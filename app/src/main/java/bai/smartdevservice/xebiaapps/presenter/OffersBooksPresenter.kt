@@ -12,7 +12,7 @@ class OffersBooksPresenter(var offersBooksContract: OffersBooksContract?) : Call
 
     var TAG = "OffersBooksPresenter"
 
-    fun getOffersBooks(listBooks: String) {
+    fun getOffersBooks(listBooks: String?) {
         val interfaceAPI = RestApiFacade.getRestApi()
         val call = interfaceAPI?.getOffresCommercialesBooks(listBooks)
         call?.enqueue(this@OffersBooksPresenter)

@@ -9,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import bai.smartdevservice.xebiaapps.R
 import bai.smartdevservice.xebiaapps.model.data.ItemBooks
 import bai.smartdevservice.xebiaapps.presenter.BooksPresenter
@@ -101,6 +102,11 @@ class BooksActivity : AppCompatActivity(), BooksContract {
 
     fun openBasket() {
 
+        if(mBookBasket.size ==0){
+
+            Toast.makeText(this, "Votre panier est vide !!!", Toast.LENGTH_LONG).show()
+            return
+        }
         intent = Intent(this@BooksActivity, BooksBasketActivity::class.java)
         val bundle = Bundle()
         bundle.putParcelableArrayList(Constant.KeyExtra.KEY_BOOKS, mBookBasket)
